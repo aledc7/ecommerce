@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Badge from '@mui/material/Badge';
-import MailIcon from '@mui/icons-material/Mail';
+
 
 import {
     Search,
     ShoppingCartOutlined,
+    SettingsInputAntenna,
 } from '@mui/icons-material';
 
 const Container = styled.div`
@@ -53,7 +54,7 @@ const Input = styled.input`
 `;
 
 const Logo = styled.h1`
-    font-weight: bold;
+    /* font-weight: bold; */
 `;
 
 const MenuItem = styled.div`
@@ -73,7 +74,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Logo>DC</Logo>
+                    <Logo>altitude <SettingsInputAntenna/> sports</Logo>
                 </Center>
                 <Right>
                     <MenuItem>Register</MenuItem>
