@@ -1,15 +1,21 @@
 import styled from 'styled-components';
-
+import { BsStackOverflow } from "react-icons/bs";
+import Tooltip from '@mui/material/Tooltip';
 
 import {
-    Facebook, 
-    Instagram, 
-    Pinterest,
+    GitHub,
+    LinkedIn,
     Twitter,
     Room,
     Phone,
     MailOutline,
 } from '@mui/icons-material';
+
+
+const openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (newWindow) newWindow.opener = null;
+}
 
 const Container = styled.div`
     display:flex;
@@ -29,11 +35,12 @@ const SocialIcon = styled.div`
     height: 40px;
     border-radius: 50%;
     color:white;
-    background-color: ${props=>props.color};
+    background-color: ${props => props.color};
     display:flex;
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    cursor:pointer;
 `;
 
 const Left = styled.div`
@@ -80,25 +87,36 @@ const Footer = () => {
         <Container>
             <Left>
                 <Logo>Ale DC</Logo>
-                <Description>Lorem Ipsum</Description>
+                <Description>Frontend Engineer</Description>
                 <SocialContainer>
-                    <SocialIcon color="#3B5999"> 
-                        <Facebook/>
-                    </SocialIcon>
-                    <SocialIcon color="#E4405F"> 
-                        <Instagram/>
-                    </SocialIcon>
-                    <SocialIcon color="#55ACEE"> 
-                        <Twitter/>
-                    </SocialIcon>
-                    <SocialIcon color="#E60023"> 
-                        <Pinterest/>
-                    </SocialIcon>
+                    <Tooltip title="Linkedin">
+                        <SocialIcon color="#55ACEE" onClick={() => openInNewTab('https://www.linkedin.com/in/aledc7/')}>
+                            <LinkedIn />
+                        </SocialIcon>
+                    </Tooltip>
+
+                    <Tooltip title="Github">
+                        <SocialIcon color="#000" onClick={() => openInNewTab('https://github.com/aledc7')}>
+                            <GitHub />
+                        </SocialIcon>
+                    </Tooltip>
+
+                    <Tooltip title="Stack Overflow">
+                        <SocialIcon color="#f48024" onClick={() => openInNewTab('https://stackoverflow.com/users/10220740/ale-dc')}>
+                            <BsStackOverflow />
+                        </SocialIcon>
+                    </Tooltip>
+
+                    <Tooltip title="Twitter">
+                        <SocialIcon color="#1DA1F2" onClick={() => openInNewTab('https://twitter.com/ing_aledc')}>
+                            <Twitter />
+                        </SocialIcon>
+                    </Tooltip>
                 </SocialContainer>
             </Left>
             <Center>
                 <Title>Useful Links</Title>
-                <List> 
+                <List>
                     <ListItem>Home</ListItem>
                     <ListItem>Cart</ListItem>
                     <ListItem>Man Fashion</ListItem>
@@ -112,9 +130,9 @@ const Footer = () => {
             </Center>
             <Right>
                 <Title>Contact</Title>
-                <ContactItem> <Room style={{marginRight:"10px"}} /> Rioja 2776, Rosario, Argentina - CP: (2000) </ContactItem>
-                <ContactItem> <Phone style={{marginRight:"10px"}}/> +54 3415498622</ContactItem>
-                <ContactItem> <MailOutline style={{marginRight:"10px"}}/> ing.aledc@gmail.com</ContactItem>
+                <ContactItem> <Room style={{ marginRight: "10px" }} /> Rioja 2776, Rosario, Argentina - CP: (2000) </ContactItem>
+                <ContactItem> <Phone style={{ marginRight: "10px" }} /> +54 3415498622</ContactItem>
+                <ContactItem> <MailOutline style={{ marginRight: "10px" }} /> ing.aledc@gmail.com</ContactItem>
                 <Paiment src="https://i.ibb.co/Qfvn4z6/payment.png" />
             </Right>
 
