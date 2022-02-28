@@ -47,3 +47,8 @@ https://i.ibb.co/r62J7KB/Two-women-in-winter-clothes-taking-picture-on-smartphon
 https://i.ibb.co/cXWFq7L/Young-man-wearing-winter-clothes-in-the-street-Young-bearded-guy-with-modern-hairstyle-with-coat-sca.jpg
 
 
+<!-- 17 shoe -->
+https://i.ibb.co/xYNc236/shoe.jpg
+
+<!-- 18 t-shirt -->
+https://i.ibb.co/LhCXKfv/tshirt.jpg
