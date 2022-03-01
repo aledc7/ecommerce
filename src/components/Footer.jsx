@@ -10,7 +10,7 @@ import {
     Phone,
     MailOutline,
 } from '@mui/icons-material';
-
+import { mobile } from '../responsive';
 
 const openInNewTab = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
@@ -19,17 +19,21 @@ const openInNewTab = (url) => {
 
 const Container = styled.div`
     display:flex;
+    ${mobile({flexDirection: "column"})}
 `;
 
 const Logo = styled.h1` 
 
 `;
+
 const Description = styled.p` 
     margin: 20px 0px;
 `;
+
 const SocialContainer = styled.div` 
     display:flex;
 `;
+
 const SocialIcon = styled.div` 
     width: 40px;
     height: 40px;
@@ -49,18 +53,24 @@ display:flex;
 flex-direction:column;
 padding: 20px;
 `;
+
 const Center = styled.div`
 flex:1;
 padding: 20px;
+${mobile({display: "none"})}
 `;
+
+
 const Right = styled.div`
 flex:1;
 padding: 20px;
+${mobile({backgroundColor: "#fff8f8"})}
 `;
 
 const Title = styled.h3`
     margin-bottom: 30px;
 `;
+
 const List = styled.ul`
     margin: 0;
     padding: 0;
@@ -68,10 +78,12 @@ const List = styled.ul`
     display:flex;
     flex-wrap:wrap;
 `;
+
 const ListItem = styled.li`
     width: 50%;
     margin-bottom: 10px;
 `;
+
 const ContactItem = styled.div`
     margin-bottom: 20px;
     display: flex;

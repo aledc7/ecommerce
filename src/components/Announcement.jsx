@@ -16,8 +16,8 @@ const Announcement = () => {
     return (
         <Container>
             <p></p>
-            <p>Now on The Last Hunt ⤤: 40-75% OFF 💥</p>
-            <p style={{marginRight:100}}>Toll-free 1 800 729-0322</p>
+            <p>Now on The Last💥</p>
+            <p style={{marginRight:100}}>Toll-free </p>
             
         </Container>
     )
